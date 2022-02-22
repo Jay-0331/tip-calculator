@@ -126,7 +126,7 @@ function App() {
               <div className='input_wrapper'>
                 <input 
                   className={isValid ?  'people_input' : 'people_input invalid_input'}
-                  id='number'
+                  id='noOfPeople'
                   type="number"
                   ref={peopleref}
                   name='noOfPeople'
