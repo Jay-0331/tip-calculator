@@ -1,4 +1,4 @@
-@media screen and (min-width:1700px) {
+@media screen and (min-width:1024px) {
     .App {
         display: grid;
         place-content: center;
@@ -12,76 +12,9 @@
 
     .calculator__container{
         flex-direction: row;
-        width: 50vw;
         border-radius: 1.5rem;
-    }
-
-    .input {
-        margin: 2rem 1rem 3rem 2rem;
-    }
-
-    .bill_input:hover, .people_input:hover {
-        outline: none;
-        border: 2px solid var(--primary-cyan);
-    }
-
-    .invalid_input:hover {
-        outline: none;
-        border: 2px solid var(--invalid-orange);
-    }
-
-    .tip_btn {
-        height: 3.5rem;
-    }
-
-    .tip_btn:hover {
-        color: var(--neutral-very-dark-cyan);
-        background-color: var(--primary-light-cyan);
-    }
-
-    .active:hover {
-        color: white;
-        background-color: var(--primary-cyan);
-    }
-
-    .tip_input_wrapper {
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-    }
-
-    .tip_input:hover {
-        outline: none;
-        border: 2px solid var(--primary-cyan);
-    }
-
-    .output {
-        width: 100%;
-        margin: 2rem 2rem 2rem 1rem;
-    }
-
-    .reset_btn:hover {
-        background-color: var(--primary-light-cyan);
-    }
-
-    
-}
-
-@media (max-width:1700px) and (min-width:1025px) {
-    .App {
-        display: grid;
-        place-content: center;
-        height: 100vh;
-    }
-    
-    header{
-        padding-top: 0;
-        padding-bottom: 5rem;
-    }
-
-    .calculator__container{
-        flex-direction: row;
-        width: 65vw;
-        border-radius: 1.5rem;
+        margin: 0 2rem 2rem 2rem;
+        box-shadow: 0px 40px 48px rgba(0, 0, 0, 0.1);
     }
 
     .input {
@@ -132,17 +65,4 @@
     }
 
 
-}
-
-
-@media (min-width:426px) and (max-width:1024px) {
-
-    header{
-        padding: 5rem 0;
-    }
-
-    .calculator__container{
-        width: 90vw;
-    }
-    
 }

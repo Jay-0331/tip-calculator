@@ -46,6 +46,8 @@ header {
   flex: 1;
   background-color: white;
   border-radius: 1.5rem 1.5rem 0 0;
+  width: auto;
+  max-width: 1080px;
 }
 
 .input {
@@ -166,7 +168,7 @@ header {
   border-radius: 6px;
   background-color: var(--neutral-lighter-grayish-cyan);
   padding: 0 1rem;
-  text-align: right;
+  text-align: center;
   font-size: var(--body-font-size);
   color: var(--neutral-very-dark-cyan);
   font-weight: var(--font-weight-bold);
