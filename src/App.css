@@ -47,7 +47,7 @@ header {
   background-color: white;
   border-radius: 1.5rem 1.5rem 0 0;
   width: auto;
-  max-width: 1080px;
+  max-width: 980px;
 }
 
 .input {
@@ -221,7 +221,7 @@ header {
 
 .tip_right {
   color: var(--primary-cyan);
-  font-size: 32px;
+  font-size: 48px;
   font-weight: var(--font-weight-bold);
 }
 
@@ -242,7 +242,7 @@ header {
 
 .total_right {
   color: var(--primary-cyan);
-  font-size: 32px;
+  font-size: 48px;
   font-weight: var(--font-weight-bold);
 }
 
@@ -264,6 +264,6 @@ header {
 }
 
 .reset_btn:disabled {
-  background-color: var(--primary-cyan);
-  opacity: 40%;
+  background-color: var(--neutral-dark-grayish-cyan);
+  opacity: 20%;
 }
