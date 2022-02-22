@@ -13,7 +13,7 @@ function App() {
   const [billAmount, setbillAmount] = useState(0);
   const [tipPercentage, settipPercentage] = useState(0);
   const [tipAmount, setTipAmount] = useState(0);
-  const [noPeople, setNoPeople] = useState(1);
+  const [noPeople, setNoPeople] = useState(0);
   const [isActive, setisActive] = useState(0);
   const [isValid, setIsValid] = useState(true);
   const [isDisabled, setisDisabled] = useState(true);
@@ -51,8 +51,8 @@ function App() {
   }
 
   const tipbtnclick = (e) => {
-    settipPercentage(e.target.getAttribute("data-percent"))
-    setisActive(e.target.getAttribute("data-percent"))
+    settipPercentage(parseInt(e.target.getAttribute("data-percent")))
+    setisActive(parseInt(e.target.getAttribute("data-percent")))
     tipperref.current.value=''
   }
 
@@ -61,7 +61,7 @@ function App() {
     peopleref.current.value=''
     tipperref.current.value=''
     setbillAmount(0)
-    setNoPeople(1)
+    setNoPeople(0)
     settipPercentage(0)
     setisDisabled(true)
   }
@@ -88,7 +88,7 @@ function App() {
               <div className='input_wrapper'>
                 <input
                   className='bill_input'
-                  type="text"
+                  type="number"
                   ref={billref}
                   name='bill'
                   placeholder='0'
@@ -101,14 +101,14 @@ function App() {
               <label htmlFor='tippercent'>Select Tip %</label>
             </div>
             <div className='tip_input_wrapper'>
-              <div className={isActive == 5 ? 'tip_btn active' : 'tip_btn'} data-percent={5} onClick={tipbtnclick}>5%</div>
-              <div className={isActive == 10 ? 'tip_btn active' : 'tip_btn'} data-percent={10} onClick={tipbtnclick}>10%</div>
-              <div className={isActive == 15 ? 'tip_btn active' : 'tip_btn'} data-percent={15} onClick={tipbtnclick}>15%</div>
-              <div className={isActive == 25 ? 'tip_btn active' : 'tip_btn'} data-percent={25} onClick={tipbtnclick}>25%</div>
-              <div className={isActive == 50 ? 'tip_btn active' : 'tip_btn'} data-percent={50} onClick={tipbtnclick}>50%</div>
+              <div className={isActive === 5 ? 'tip_btn active' : 'tip_btn'} data-percent={5} onClick={tipbtnclick}>5%</div>
+              <div className={isActive === 10 ? 'tip_btn active' : 'tip_btn'} data-percent={10} onClick={tipbtnclick}>10%</div>
+              <div className={isActive === 15 ? 'tip_btn active' : 'tip_btn'} data-percent={15} onClick={tipbtnclick}>15%</div>
+              <div className={isActive === 25 ? 'tip_btn active' : 'tip_btn'} data-percent={25} onClick={tipbtnclick}>25%</div>
+              <div className={isActive === 50 ? 'tip_btn active' : 'tip_btn'} data-percent={50} onClick={tipbtnclick}>50%</div>
               <input
                 className='tip_input'
-                type="text"
+                type="number"
                 ref={tipperref}
                 name='tippercent'
                 placeholder='Custom'
@@ -124,7 +124,7 @@ function App() {
               <div className='input_wrapper'>
                 <input 
                   className={isValid ?  'people_input' : 'people_input invalid_input'}
-                  type="text"
+                  type="number"
                   ref={peopleref}
                   name='noOfPeople'
                   placeholder='0' 
