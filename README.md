@@ -23,7 +23,7 @@ User's flow:
 ![TipCalculator](mobile-design.jpg)
 
 
-### [View Live]()
+### [View Live](https://jay-0331.github.io/tip-calculator/)
 
 
 ## Credits
