@@ -87,6 +87,7 @@ function App() {
               </div>
               <div className='input_wrapper'>
                 <input
+                  id='bill'
                   className='bill_input'
                   type="number"
                   ref={billref}
@@ -108,6 +109,7 @@ function App() {
               <div className={isActive === 50 ? 'tip_btn active' : 'tip_btn'} data-percent={50} onClick={tipbtnclick}>50%</div>
               <input
                 className='tip_input'
+                id='tippercent'
                 type="number"
                 ref={tipperref}
                 name='tippercent'
@@ -124,6 +126,7 @@ function App() {
               <div className='input_wrapper'>
                 <input 
                   className={isValid ?  'people_input' : 'people_input invalid_input'}
+                  id='number'
                   type="number"
                   ref={peopleref}
                   name='noOfPeople'
